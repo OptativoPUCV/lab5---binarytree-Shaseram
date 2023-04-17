@@ -28,3 +28,9 @@ treemap.c:42:14: error: assignment to ‘TreeNode *’ from ‘int’ makes poin
 cc1: all warnings being treated as errors
 Compilation failed
 b1cae7d
+Mon 17 Apr 2023 07:38:34 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|8
+total_score: 0/70
+aaa1460
