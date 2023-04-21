@@ -188,6 +188,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
   TreeNode* ub_node = NULL;
   while (aux != NULL) {
     if (is_equal(tree, key, aux->pair->key) == 1 ) {
+      ub_node = aux;
       tree->current = aux;
       break;
       
