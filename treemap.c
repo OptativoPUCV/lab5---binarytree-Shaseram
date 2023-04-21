@@ -178,14 +178,27 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
       aux = aux->left;
     }
   }
-
-
+  
   return NULL;
 }
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
-
+  TreeNode* aux = tree->root;
+  
+  while (aux != NULL) {
+    if ((is_equal(tree, key, aux->pair->key) == 1 || tree->lower_than(key,aux->pair->key) == 0)) {
+      tree->current = aux;
+      return aux->pair;
+      
+    } else if (tree->lower_than(key,aux->pair->key) == 0) {
+      aux = aux->right;
+    } else if (tree->lower_than(key,aux->pair->key) == 1) {
+      aux = aux->left;
+    }
+  }
+  
+  
   
   return NULL;
 }
