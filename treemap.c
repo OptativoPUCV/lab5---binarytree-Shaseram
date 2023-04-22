@@ -201,7 +201,7 @@ Pair * upperBound(TreeMap * tree, void* key) {
     }
   }
   if (ub_node == NULL) return NULL;
-  if (tree->lower_than(ub_node->pair->key,key) == 1) return aux->pair;
+  if (tree->lower_than(ub_node->pair->key,key) == 1) return aux;
   
   
   return ub_node->pair;
